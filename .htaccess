@@ -1,0 +1,9 @@
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^/*(.*)$ /wd4d/index.php/$1
+
+AuthUserFile /var/www/wd4d/.htpasswd
+AuthGroupFile /dev/null
+AuthName 'WD4D - WebDAV 4 Dropbox'
+AuthType Basic
+require valid-user
