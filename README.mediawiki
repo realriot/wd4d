@@ -30,11 +30,12 @@ Thanks in advance
  mysql -u<dbuser> -p<dbpassword> -h<host> <database> wd4d.sql
 
 === Generate Dropbox access token ===
-To generate an access token you can choose my online tool at: [https://tools.schmidt.ps/authWebDAV4Dropbox]
-Alternatively you can use any other tool of your choice which creates valid Dropbox tokens.
+To generate an access token you can choose my online tool at: '''[https://tools.schmidt.ps/authWebDAV4Dropbox]'''
+Alternatively you can use any other tool of your choice which creates a valid Dropbox token.
 
 '''Please secure your access token. NOBODY may know it! This token allows full access
 to your configured dropbox space.'''
 
 Greets and have fun with this little goodie...
+
 ''Sascha Schmidt''
