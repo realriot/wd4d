@@ -37,7 +37,9 @@ Thanks in advance
  chown www-data.www-data data/
 
 === Generate Dropbox access token ===
-To generate an access token you can choose my online tool at: '''[https://tools.schmidt.ps/authWebDAV4Dropbox]'''
+To generate an access token you can choose my online tool at:
+'''[https://tools.schmidt.ps/authWebDAV4Dropbox]'''
+
 Alternatively you can use any other tool of your choice which creates a valid Dropbox token.
 
 '''Please secure your access token. NOBODY may know it! This token allows full access
