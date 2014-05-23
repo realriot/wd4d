@@ -1,0 +1,40 @@
+'''WebDAV 4 Dropbox''' is a SabreDAV PHP hook to provide Dropbox access using the
+standard webdav protocol. Basic HTTP authentication is used to provide multiuser
+access.
+
+To improve the browsing experience of your Dropbox content this hook will cache
+the structure (files and directories) for a certain amount of time within a
+mysql database.
+
+=== Donation ===
+Since I'm developing in my free time I'd like to ask you to support my work.
+You can do it by contributing 5 EUR via paypal. This will give me motivation
+to keep on coding and fixing bugs.
+
+Thanks in advance
+
+[https://www.paypal.com/cgi-bin/webscr?no_note=0&lc=US&business=realriot%40realriot.de&item_name=GitHub+-+ff4d&cmd=_donations&currency_code=USD '''DONATE NOW VIA PAYPAL''']
+
+=== Installation ===
+* Clone this repository to a location where your PHP capable webserver has access to.
+ git clone https://github.com/realriot/wd4d.git
+* Enter this directory and configure everything within the configuration file.
+ includes/config.inc.php
+** 'logfile' is the file where status and debug messages are written to.
+** 'mysql_*' is used to allow mysql access for this script.
+** 'wd4d_users' array holds all users with their provided accesstoken. Needed to access the Dropbox API.
+** 'debug' will define the verbosity of all logmessages.
+** 'cachetime' is used to define how long the Dropbox file and directory structure is cached within the database.
+** 'wd4d_root' has to filled with the URL path to this script (f.e. '/wd4d').
+* Install data-structure into given mysql database.
+ mysql -u<dbuser> -p<dbpassword> -h<host> <database> wd4d.sql
+
+=== Generate Dropbox access token ===
+To generate an access token you can choose my online tool at: [https://tools.schmidt.ps/authWebDAV4Dropbox]
+Alternatively you can use any other tool of your choice which creates valid Dropbox tokens.
+
+'''Please secure your access token. NOBODY may know it! This token allows full access
+to your configured dropbox space.'''
+
+Greets and have fun with this little goodie...
+''Sascha Schmidt''
