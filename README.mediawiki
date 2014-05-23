@@ -27,7 +27,12 @@ Thanks in advance
 ** 'cachetime' is used to define how long the Dropbox file and directory structure is cached within the database.
 ** 'wd4d_root' has to filled with the URL path to this script (f.e. '/wd4d').
 * Install data-structure into given mysql database.
- mysql -u<dbuser> -p<dbpassword> -h<host> <database> wd4d.sql
+ mysql -u<dbuser> -p<dbpassword> -h<host> <database> <wd4d.sql
+* Configure basic HTTP authentication for this directory. As an example I've added some lines to the '''.htaccess''' file.
+* Change the '''RewriteRule''' line within the '''.htaccess''' file to reflect the correct relative WD4D URL path:
+ RewriteRule ^/*(.*)$ /wd4d/index.php/$1 
+* Create 'data' subdirectory with webserver write permission to allow webdav locks.
+ chown www-data.www-data data/
 
 === Generate Dropbox access token ===
 To generate an access token you can choose my online tool at: '''[https://tools.schmidt.ps/authWebDAV4Dropbox]'''
