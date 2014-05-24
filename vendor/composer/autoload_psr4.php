@@ -6,4 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Sabre\\DAV\\' => array($vendorDir . '/sabre/dav/lib/DAV'),
+    'Sabre\\DAVACL\\' => array($vendorDir . '/sabre/dav/lib/DAVACL'),
+    'Sabre\\CardDAV\\' => array($vendorDir . '/sabre/dav/lib/CardDAV'),
+    'Sabre\\CalDAV\\' => array($vendorDir . '/sabre/dav/lib/CalDAV'),
 );

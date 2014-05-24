@@ -9,7 +9,7 @@ use Sabre\VObject;
  *
  * @copyright Copyright (C) 2007-2014 fruux GmbH (https://fruux.com/).
  * @author Evert Pot (http://evertpot.com/)
- * @license http://code.google.com/p/sabredav/wiki/License Modified BSD License
+ * @license http://sabre.io/license/ Modified BSD License
  */
 class ExpandEventsDTSTARTandDTENDbyDayTest extends \Sabre\DAVServerTest {
 
@@ -44,7 +44,7 @@ END:VCALENDAR
 
     function testExpandRecurringByDayEvent() {
 
-        $request = new HTTP\Request(array(
+        $request = HTTP\Sapi::createFromServerArray(array(
             'REQUEST_METHOD' => 'REPORT',
             'HTTP_CONTENT_TYPE' => 'application/xml',
             'REQUEST_URI' => '/calendars/user1/calendar1',
